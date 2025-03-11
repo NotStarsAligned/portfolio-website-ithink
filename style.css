@@ -28,7 +28,7 @@ body{
     color:whitesmoke;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #101218, #222233);
+    background: #222233;
     height: 100%;
 
 }
@@ -79,9 +79,8 @@ a:hover {
 }
 
 .logo:hover{
-    cursor: default;
+    cursor: pointer;
 }
-
 
 .menu-links{
     position: absolute;
@@ -98,36 +97,23 @@ a:hover {
     cursor: pointer;
 }
 
+
 /* Section: Hero thingamabob */
 
 #hero-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 90%;
     height: 55vh;
     background-color: #3d3956; 
-    color: #fff;
     border-radius: 25px;
     margin: 0 auto;
-    margin-top: 200px;
-    padding: 20px;
+    margin-top: 110px;
+    padding: 10px;
     overflow: hidden;
     position: relative;
   }
-
-.star-container{
-    position: absolute;
-    top: 260px;
-    left: 30px;
-
-}
-
-.star-decor{
-    position: absolute;
-    overflow: visible;
-    z-index: 1;
-}
 
 .hero-text {
     flex: 1;
@@ -174,7 +160,17 @@ a:hover {
     font-size: 4rem;
     color: #ffdeb0;
     background-color: transparent;
+    font-weight: 500;
+
   }
+
+  .my-heading span:last-child:hover{
+    color: #ffe281;
+    text-decoration: underline;
+    text-underline-offset: 0.8rem;
+    transition: all ease 600ms
+  }
+  
 .creature {
     position: relative;
     display: flex;
@@ -182,9 +178,11 @@ a:hover {
     justify-content: flex-end;
     flex: 1;
     max-width: 50%;
+    min-width: 25%;
     margin-right: -150px;
     margin-top: 50px;
-    overflow: visible;
+    overflow: hidden;
+
   }
   
   .creature img {
@@ -210,14 +208,15 @@ a:hover {
     background-color: transparent;
   }
 
-  .hero-links.my-buttons a {
+  .hero-links a {
     display: inline-block;
     padding: 15px 50px;
-    border: black solid 2px;
+    border: black solid 3px;
     margin-top: 40px;
     border-radius: 40px;
-    font-size: 25px;
+    font-size: 1.5rem;
     margin-right: 20px;
+    text-decoration: none;
   }
   
   .contact-button {
@@ -231,3 +230,113 @@ a:hover {
     color: #1e1e2d;
     font-weight: bold;
   }
+
+  .contact-button:hover {
+    background-color: rgb(20, 20, 27);
+    color: #ffdc67;
+  }
+
+  .gallery-button:hover {
+    background-color: rgb(20, 20, 27);
+    color: #b4acd3;
+    
+  }
+
+  /* Content Section */
+
+.star-seperator{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+#content-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 40px;
+}
+
+#content-container img {
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  border: white solid 5px;
+  cursor: pointer;
+}
+
+.content-title{
+  font-family: 'Cherry Bomb One', sans-serif;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  padding-bottom: 30px;
+  color: #ffdeb0;
+}
+
+/* Contact Section */
+
+#contact-section{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10rem;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-left-profile{
+  flex: 3;
+}
+
+.contact-left-profile img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.contact-right-text{
+  flex: 5;
+}
+
+.contact-right-text h1 {
+  font-weight: 700;
+  font-family: "Bodoni Moda", serif;;
+  font-size: 4em;
+  color: #ffdeb0;
+}
+
+.contact-right-text p{
+  font-size: 2em;
+  color: #b296c2;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.contact-right-text .contact-highlight{
+  color:#ffdeb0;
+  font-weight: 600;
+}
+
+.contact-section-button{
+  display: inline-block;
+  padding: 20px 60px;
+  border: black solid 3px;
+  margin-top: 40px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  text-decoration: none;
+  background-color: #b4acd3;
+  color: #161822;
+  font-weight: 800;
+  font-size: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section-button:hover{
+  text-decoration: none;
+  background-color: #161822;
+  color: #b4acd3;
+  
+}
