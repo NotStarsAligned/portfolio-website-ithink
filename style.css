@@ -56,10 +56,9 @@ nav {
 }
 
 .nav-links {
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
     font-size: 1.5rem;
-    
 }
 
 a {
@@ -103,7 +102,6 @@ a:hover {
 #hero-container {
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 90%;
     height: 55vh;
     background-color: #3d3956; 
@@ -263,6 +261,7 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   border: white solid 5px;
   cursor: pointer;
+  max-height: 400px;
 }
 
 .content-title{
@@ -338,5 +337,149 @@ a:hover {
   text-decoration: none;
   background-color: #161822;
   color: #b4acd3;
+}
+
+#footer-section{
+ padding: 1.5rem;
+}
+
+.footer-images{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo{
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.social-media{
+  display: flex;
+  gap: 20px;
+}
+
+.fa-instagram{
+  font-size: 3.5rem;
+  color: #ffc59a;
+  cursor: pointer;
+}
+
+.fa-twitter{
+  font-size: 3.5rem;
+  color: #ffc59a;
+  cursor: pointer;
+}
+
+/* Gallery thing */
+
+#gallery-section{
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+  justify-content: center;
+  margin: 0 auto; 
+  max-width: 800px;
+  padding: 20px;
+}
+
+.gallery-images img{
+  max-height: 350px;
+  border-radius: 10px;
+}
+
+#gallery-section h1{
+  font-family: 'Cherry Bomb One', sans-serif;
+  font-size: 4em;
+  font-weight: 400;
+  color: #ffdeb0;
+}
+
+@media (max-width: 800px) {
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-content: center;
+    margin: 0 auto; 
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .gallery-images img{
+    max-height: 200px;
+  }
+
+  .contact-left-profile{
+    display: none;
+  }
+
+  .fatass{
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+  }
   
+  .logo{
+    display: none;
+  }
+
+  .footer-images{
+    max-height: 20px;
+  }
+
+  .footer-star{
+    display: none;
+  }
+
+  .creature{
+    display: none;
+  }
+
+  #hero-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; 
+    align-items: center;
+    max-width: 90%;
+    overflow: visible;
+    background-color: transparent; 
+
+  }
+
+  .hero-text {
+    text-align: center;
+    width: 100%;
+    order: 1;
+    font-size: 1.5em; 
+  }
+
+  .my-heading{
+    font-size: 0.5em;
+  }
+
+  .hero-description{
+    background-color: transparent;
+  }
+
+  #content-container img{
+    max-height: 200px;
+    gap: 10px;
+  }
+
+  .star-seperator{
+    display: none;
+  }
 }
