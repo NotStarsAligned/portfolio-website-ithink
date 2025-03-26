@@ -89,7 +89,7 @@ a:hover {
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .fatass{
@@ -111,6 +111,8 @@ a:hover {
     padding: 10px;
     overflow: hidden;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
   }
 
 .hero-text {
@@ -132,34 +134,36 @@ a:hover {
 .hero-description p,
 .creature img {
     background-color: transparent;
+    text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-top: -60px;
     color: #b296c2;
 }
 
 .hero-text h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     white-space: nowrap;
     margin-bottom: 20px;
     margin-top: -20px;
 }
-  
+
+.my-heading span{
+  font-size: 4rem;
+}
+
 .my-heading span:first-child{
-      font-size: 4rem;
       color: #b296c2;
       background-color: transparent;
   }
 
 .my-heading span:last-child { 
     font-family: 'Cherry Bomb One', sans-serif;
-    font-size: 4rem;
     color: #ffdeb0;
     background-color: transparent;
     font-weight: 500;
-
   }
 
   .my-heading span:last-child:hover{
@@ -249,11 +253,13 @@ a:hover {
 }
 
 #content-container{
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   justify-content: center;
-  padding: 2rem;
-  gap: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
 }
 
 #content-container img {
@@ -261,7 +267,8 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   border: white solid 5px;
   cursor: pointer;
-  max-height: 400px;
+  max-height: 300px;
+  
 }
 
 .content-title{
@@ -269,9 +276,9 @@ a:hover {
   font-size: 2.5em;
   display: flex;
   justify-content: center;
-  padding: 10px;
-  padding-bottom: 30px;
+  padding: 1em;
   color: #ffdeb0;
+  text-align: center;
 }
 
 /* Contact Section */
@@ -294,13 +301,13 @@ a:hover {
   border-radius: 50%;
 }
 
-.contact-right-text{
+.contact-right-text{ 
   flex: 5;
 }
 
-.contact-right-text h1 {
+.contact-right-text h2 {
   font-weight: 700;
-  font-family: "Bodoni Moda", serif;;
+  font-family: "Bodoni Moda", serif;
   font-size: 4em;
   color: #ffdeb0;
 }
@@ -319,7 +326,7 @@ a:hover {
 
 .contact-section-button{
   display: inline-block;
-  padding: 20px 60px;
+  padding: 0.8em 2em;
   border: black solid 3px;
   margin-top: 40px;
   border-radius: 20px;
@@ -331,6 +338,7 @@ a:hover {
   font-weight: 800;
   font-size: 2em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  justify-content: center;
 }
 
 .contact-section-button:hover{
@@ -381,15 +389,16 @@ a:hover {
 .gallery-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; 
+  gap: 1em; 
   justify-content: center;
+  max-width: 900px;
   margin: 0 auto; 
-  max-width: 800px;
   padding: 20px;
 }
 
 .gallery-images img{
-  max-height: 350px;
+  height: auto;
+  max-width: 100%;
   border-radius: 10px;
 }
 
@@ -400,11 +409,74 @@ a:hover {
   color: #ffdeb0;
 }
 
+#contact-medias{
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  list-style: none;
+}
+
+.contact-title{
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  margin-top: 50px;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 800;
+  color: #ffdeb0;
+  text-align: center;
+}
+
+.contact-text{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+  color: #cbb3d8;
+}
+
+#contact-medias{
+  margin-top: 100px;
+}
+
+.contact-page-section{
+  padding: 30px;
+}
+
+#contact-medias .fa-instagram{
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#contact-medias .fa-twitter{
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#contact-medias .fa-discord{
+  color: #ffc59a;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.media-text{
+  margin-left: 0.5em;
+  font-family: "Poppins", serif;
+}
+
+#footer-contact-section{
+  margin-top: 3em;
+  padding: 20px;
+}
+
 @media (max-width: 800px) {
+
+  /* Gallery Screens */
+
   .gallery-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; 
     justify-content: center;
     margin: 0 auto; 
     max-width: 500px;
@@ -415,12 +487,27 @@ a:hover {
     max-height: 200px;
   }
 
+  /* Index.html */
+
   .contact-left-profile{
     display: none;
+    flex: 0;
   }
 
   .fatass{
     display: none;
+  }
+
+  #hero-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px; 
+    align-items: center;
+    max-width: 90%;
+    overflow: visible;
+    background-color: transparent; 
+    margin-top: 10rem;
+    text-align: center;
   }
 
   .nav-links {
@@ -431,47 +518,74 @@ a:hover {
     list-style: none;
     font-size: 1.5rem;
   }
+
+  .creature{
+    display: none;
+  }
   
   .logo{
     display: none;
   }
 
+  .hero-text{
+    text-align: center;
+    width: 100%;
+    order: 1;
+    font-size: 2.5em; 
+  }
+
+  .hero-description p{
+    background-color: transparent;
+    font-size: 1.4rem;
+  }
+
+  .my-heading span{
+    font-size: 3rem;
+  }
+
+  .contact-right-text h1{
+    flex: 1;
+    font-size: 4rem;
+  }
+
+  .contact-right-text p{
+    font-size: 1.5em;
+    padding: 0px;
+  }
+
+  .contact-section-button{
+    padding: 0.8em 2em;
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+
   .footer-images{
-    max-height: 20px;
+    max-height: 10px;
   }
 
   .footer-star{
     display: none;
   }
 
-  .creature{
-    display: none;
+  .footer-logo{
+    max-height: 30px;
+    max-width: 200px;
   }
 
-  #hero-container {
-    display: flex;
+  #footer-section i{
+    font-size: 2em;
+  }
+
+  /* Brief Content Section */
+
+  #content-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
     justify-content: center;
-    padding: 20px; 
-    align-items: center;
-    max-width: 90%;
-    overflow: visible;
-    background-color: transparent; 
-
-  }
-
-  .hero-text {
-    text-align: center;
-    width: 100%;
-    order: 1;
-    font-size: 1.5em; 
-  }
-
-  .my-heading{
-    font-size: 0.5em;
-  }
-
-  .hero-description{
-    background-color: transparent;
+    max-width: 500px;
+    padding: 3em;
   }
 
   #content-container img{
@@ -479,7 +593,34 @@ a:hover {
     gap: 10px;
   }
 
+  .content-title{
+    margin-top: 1.5em;
+  }
+
   .star-seperator{
     display: none;
   }
+
+  /* Contact.html */
+
+  #contact-medias{
+    font-size: 1.8rem;
+    gap: 2em;
+  }
+
+  .contact-title{
+    font-size: 3.5rem;
+  }
+
+  .contact-text{
+    font-size: 1.5rem;
+  }
+
+  .media-text{
+    display: none;
+  }
+  .footer-images i{
+    font-size: 2.5rem;
+  }
 }
+
